@@ -121,9 +121,12 @@ def parse_args():
 
 def main():
     init_args, call_args = parse_args()
+    print(init_args)
+    print(call_args)
     # TODO: Video and Webcam are currently not supported and
     #  may consume too much memory if your input folder has a lot of images.
     #  We will be optimized later.
+    # prin(**init_args)
     inferencer = DetInferencer(**init_args)
     inferencer(**call_args)
 
